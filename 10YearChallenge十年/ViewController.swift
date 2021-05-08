@@ -66,7 +66,11 @@ class ViewController: UIViewController {
         
         let dateComponents = Calendar.current.dateComponents(in: TimeZone.current, from: datePicker.date)
         let year = dateComponents.year!
-        yearLabel.text = "\(year)"
+        var month = dateComponents.month!
+        let day = dateComponents.day!
+        month -= 1
+        
+        yearLabel.text = "\(year)-\(month)-\(day)"
     }
     //if eles, 比對Array內的照片
     func compare() {
@@ -94,8 +98,7 @@ class ViewController: UIViewController {
     
     @IBAction func chageDate(_ sender: UIDatePicker) {
         //取得datePicker的日期
-        let photoDate = datePicker.date
-        let dateComponents = Calendar.current.dateComponents(in: TimeZone.current, from: photoDate)
+        let dateComponents = Calendar.current.dateComponents(in: TimeZone.current, from: datePicker.date)
         let year = dateComponents.year!
         var month = dateComponents.month!
         let day = dateComponents.day!
@@ -122,7 +125,6 @@ class ViewController: UIViewController {
             time()
             imageNumber = sliderNumber
             dateSlider.value = Float(imageNumber)
-            yearLabel.text = photosArray[sliderNumber]
         }else{
             timer?.invalidate()
         }
