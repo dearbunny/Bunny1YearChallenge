@@ -14,49 +14,51 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateSlider: UISlider!
     @IBOutlet weak var yearLabel: UILabel!
     
+    //指定特定時間生成 Date
     let dateFormatter = DateFormatter()
-    var dateString:String = ""
+    var dateString:String = "2018/02/01"
     var timer:Timer?
     var imageNumber = 0
     var sliderNumber = 0
     
     //Array 依序列出欲顯示之圖片
     let photosArray = [
-        "2018-02-16", "2018-03-4", "2018-04-11", "2018-05-9", "2018-06-9", "2018-07-22", "2018-08-18", "2018-09-1", "2018-10-1","2018-11-11", "2018-12-1","2019-01-29"
+        "2018-02-1", "2018-03-1", "2018-04-1", "2018-05-1", "2018-06-1", "2018-07-1", "2018-08-1", "2018-09-1", "2018-10-1","2018-11-1", "2018-12-1","2019-01-1"
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFormatter.dateFormat = "yyyy/MM/dd"
+        dateSlider.setThumbImage(UIImage(named: "icon"), for: .normal)
     }
     
     //使用switch做選擇照片的連續數值判斷
-    func choosePhoto(num2:Int){
-        switch  num2 {
+    func choosePhoto(num1:Int){
+        switch  num1 {
         case 0:
-            dateString = "2018-02-16"
+            dateString = "2018/02/01"
         case 1:
-            dateString = "2018-03-04"
+            dateString = "2018/03/01"
         case 2:
-            dateString = "2018-04-11"
+            dateString = "2018/04/01"
         case 3:
-            dateString = "2018-05-09"
+            dateString = "2018/05/01"
         case 4:
-            dateString = "2018-06-09"
+            dateString = "2018/06/01"
         case 5:
-            dateString = "2018-07-22"
+            dateString = "2018/07/01"
         case 6:
-            dateString = "2018-08-18"
+            dateString = "2018/08/01"
         case 7:
-            dateString = "2018-09-01"
+            dateString = "2018/09/01"
         case 8:
-            dateString = "2018-10-01"
+            dateString = "2018/10/01"
         case 9:
-            dateString = "2018-11-11"
+            dateString = "2018/11/01"
         case 10:
-            dateString = "2018-12-01"
+            dateString = "2018/12/01"
         default:
-            dateString = "2019-01-29"
+            dateString = "2019/01/01"
         }
         //使datePicker顯示之日期為dateString內的字串
         let date = dateFormatter.date(from: dateString)
@@ -70,10 +72,10 @@ class ViewController: UIViewController {
     func compare() {
         if imageNumber >= photosArray.count{
             imageNumber = 0
-            choosePhoto(num2: imageNumber)
+            choosePhoto(num1: imageNumber)
             photoImageView.image = UIImage(named: photosArray[imageNumber])
         }else{
-            choosePhoto(num2: imageNumber)
+            choosePhoto(num1: imageNumber)
             photoImageView.image = UIImage(named: photosArray[imageNumber])
         }
         //連動slider
@@ -95,31 +97,23 @@ class ViewController: UIViewController {
         let photoDate = datePicker.date
         let dateComponents = Calendar.current.dateComponents(in: TimeZone.current, from: photoDate)
         let year = dateComponents.year!
-        let pictureDate = "\(year)"
-        
         var month = dateComponents.month!
+        let day = dateComponents.day!
         //Array由0開始，因此月份需-1
         month -= 1
-        photoImageView.image = UIImage(named: pictureDate)
+        photoImageView.image = UIImage(named: photosArray[month])
         //連動slider
-        dateSlider.value = Float(year - 2018)
-        yearLabel.text = "\(year)"
+        dateSlider.value = Float(month)
+        yearLabel.text = "\(year)-\(month)-\(day)"
     }
     
-    // 拉把
+    // Slider拉把
     @IBAction func changeDateSlider(_ sender: UISlider) {
         //取得日期
-        sender.value = round(sender.value)
-        let newDate = DateComponents(calendar: Calendar.current, year: Int(photosArray[sliderNumber])).date
-        datePicker.date = newDate!
-        sender.value.round()
-        
         sliderNumber = Int(sender.value)
         dateSlider.value.round()
-        photoImageView.image = UIImage(named: photosArray[sliderNumber])
         yearLabel.text = photosArray[sliderNumber]
         photoImageView.image = UIImage(named: photosArray[sliderNumber])
-        
     }
     
     //自動播放
@@ -128,6 +122,7 @@ class ViewController: UIViewController {
             time()
             imageNumber = sliderNumber
             dateSlider.value = Float(imageNumber)
+            yearLabel.text = photosArray[sliderNumber]
         }else{
             timer?.invalidate()
         }

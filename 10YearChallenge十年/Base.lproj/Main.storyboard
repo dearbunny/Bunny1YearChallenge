@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2018-02-16" translatesAutoresizingMaskIntoConstraints="NO" id="DXv-Ml-xxJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2018-02-1" translatesAutoresizingMaskIntoConstraints="NO" id="DXv-Ml-xxJ">
                                 <rect key="frame" x="50" y="142" width="328" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -62,14 +62,14 @@
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1S-L0-OHJ">
                                 <rect key="frame" x="0.0" y="686" width="428" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="540322643.41259897">
-                                    <!--2018-02-14 17:37:23 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="539113043.41259897">
+                                    <!--2018-01-31 17:37:23 +0000-->
                                 </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="315572400">
-                                    <!--2011-01-01 11:00:00 +0000-->
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="539175600">
+                                    <!--2018-02-01 11:00:00 +0000-->
                                 </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="570452400">
-                                    <!--2019-01-29 11:00:00 +0000-->
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="568033200">
+                                    <!--2019-01-01 11:00:00 +0000-->
                                 </date>
                                 <connections>
                                     <action selector="chageDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="D9G-lv-RnL"/>
@@ -82,7 +82,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2018-02-16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-ug-vHU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2018-02-1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-ug-vHU">
                                 <rect key="frame" x="100" y="512" width="229" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TheCrowGrunge" family="The Crow Grunge" pointSize="56"/>
@@ -106,7 +106,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2018-02-16" width="328" height="362"/>
+        <image name="2018-02-1" width="328" height="362"/>
         <image name="背景" width="428" height="926"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
