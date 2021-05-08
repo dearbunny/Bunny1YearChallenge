@@ -13,6 +13,8 @@
 		184EE4DE26459BD800213333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184EE4DC26459BD800213333 /* Main.storyboard */; };
 		184EE4E026459BD900213333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184EE4DF26459BD900213333 /* Assets.xcassets */; };
 		184EE4E326459BD900213333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184EE4E126459BD900213333 /* LaunchScreen.storyboard */; };
+		184EE4F12645A34700213333 /* Morning Glory Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 184EE4F02645A34700213333 /* Morning Glory Font.ttf */; };
+		184EE4F32645A42200213333 /* TheCrowGrunge.otf in Resources */ = {isa = PBXBuildFile; fileRef = 184EE4F22645A42200213333 /* TheCrowGrunge.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		184EE4DF26459BD900213333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184EE4E226459BD900213333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184EE4E426459BD900213333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184EE4F02645A34700213333 /* Morning Glory Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Morning Glory Font.ttf"; sourceTree = "<group>"; };
+		184EE4F22645A42200213333 /* TheCrowGrunge.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TheCrowGrunge.otf; path = ../../../../../../Fonts/TheCrowGrunge.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				184EE4DF26459BD900213333 /* Assets.xcassets */,
 				184EE4E126459BD900213333 /* LaunchScreen.storyboard */,
 				184EE4E426459BD900213333 /* Info.plist */,
+				184EE4F02645A34700213333 /* Morning Glory Font.ttf */,
+				184EE4F22645A42200213333 /* TheCrowGrunge.otf */,
 			);
 			path = "10YearChallenge十年";
 			sourceTree = "<group>";
@@ -124,8 +130,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184EE4F12645A34700213333 /* Morning Glory Font.ttf in Resources */,
 				184EE4E326459BD900213333 /* LaunchScreen.storyboard in Resources */,
 				184EE4E026459BD900213333 /* Assets.xcassets in Resources */,
+				184EE4F32645A42200213333 /* TheCrowGrunge.otf in Resources */,
 				184EE4DE26459BD800213333 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
